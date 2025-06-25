@@ -1,0 +1,41 @@
+{
+  "name": "@frameless/kennisbank-frontend",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --max-warnings 0",
+    "lint-build": "tsc --noEmit",
+    "lint-fix": "eslint . --max-warnings 0 --fix",
+    "clean": "rimraf .next"
+  },
+  "dependencies": {
+    "next": "15.3.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@frameless/eslint-config": "workspace:*",
+    "@frameless/typescript-config": "workspace:*",
+    "@types/node": "22.15.35",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "eslint": "9.29.0",
+    "rimraf": "6.0.1",
+    "typescript": "5.8.2"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "pnpm": ">=8.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.1.8",
+      "react": "19.1.0"
+    }
+  }
+}
