@@ -63,6 +63,66 @@
       "locale": null
     },
     {
+      "documentId": "om6lf2to7s1o6cb7uqkzu6yw",
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::product.product",
+      "properties": {
+        "fields": [
+          "title",
+          "slug"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ggdatu8xv61r78zqwasjy34h",
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::product.product",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "ur0x5ibvyvso532st3ytmdii",
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::product.product",
+      "properties": {},
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "xmmelyrb22hgwgpcm4l4vcfy",
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::product.product",
+      "properties": {
+        "fields": [
+          "title",
+          "slug"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
+      "documentId": "fmd3liew1nwvo6mofgv5858f",
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::product.product",
+      "properties": {
+        "fields": [
+          "title",
+          "slug"
+        ]
+      },
+      "conditions": [],
+      "locale": null
+    },
+    {
       "documentId": "riod9d2ls97q8j9nakrmw952",
       "action": "admin::api-tokens.access",
       "actionParameters": {},
