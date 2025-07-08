@@ -47,6 +47,20 @@
           "sortable": true
         }
       },
+      "sections": {
+        "edit": {
+          "label": "Inhoudssecties",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sections",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -124,6 +138,12 @@
           {
             "name": "slug",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "sections",
+            "size": 12
           }
         ]
       ],

@@ -20,6 +20,12 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.content-block"
+      ]
     }
   }
 }

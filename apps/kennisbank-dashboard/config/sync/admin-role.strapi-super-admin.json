@@ -63,14 +63,15 @@
       "locale": null
     },
     {
-      "documentId": "om6lf2to7s1o6cb7uqkzu6yw",
+      "documentId": "yo4numuzt6homlo49x05dtu7",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
         "fields": [
           "title",
-          "slug"
+          "slug",
+          "sections"
         ]
       },
       "conditions": [],
@@ -95,28 +96,30 @@
       "locale": null
     },
     {
-      "documentId": "xmmelyrb22hgwgpcm4l4vcfy",
+      "documentId": "cpf9i3iq7rn789jwjh6w6xzo",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
         "fields": [
           "title",
-          "slug"
+          "slug",
+          "sections"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "fmd3liew1nwvo6mofgv5858f",
+      "documentId": "cy3axp05tspeo7mf23z3nbka",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
         "fields": [
           "title",
-          "slug"
+          "slug",
+          "sections"
         ]
       },
       "conditions": [],

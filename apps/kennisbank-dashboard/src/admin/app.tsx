@@ -30,6 +30,21 @@ export default {
       // 'zh-Hans',
       // 'zh',
     ],
+    translations: {
+      nl: {
+        shared: 'Sections',
+        introduction: 'Inleiding',
+        application: 'Aanvraag',
+        proof: 'Bewijs',
+        conditions: 'Voorwaarden',
+        objection: 'Bezwaar',
+        costs: 'Kosten',
+        term: 'Termijn',
+        'what to do if no respons': 'Wat te doen bij geen reactie',
+        details: 'Bijzonderheden',
+        contact: 'Contact',
+      },
+    },
   },
   bootstrap(/*app: StrapiApp*/) {},
 };

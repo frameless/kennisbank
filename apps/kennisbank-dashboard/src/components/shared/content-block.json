@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_content_blocks",
+  "info": {
+    "displayName": "ContentBlock"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "introduction",
+        "application",
+        "proof",
+        "conditions",
+        "objection",
+        "costs",
+        "term",
+        "what to do if no response",
+        "details",
+        "contact"
+      ]
+    },
+    "content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
