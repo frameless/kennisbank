@@ -6,6 +6,16 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "yld85oqb2i6n802hrsyennvy",
+      "action": "api::product.product.find",
+      "locale": null
+    },
+    {
+      "documentId": "laj8g2kqnd1jem9xa90m9aqt",
+      "action": "api::product.product.findOne",
+      "locale": null
+    },
+    {
       "documentId": "hddojxzx6gcz31d3ili9frmo",
       "action": "plugin::users-permissions.auth.changePassword",
       "locale": null
