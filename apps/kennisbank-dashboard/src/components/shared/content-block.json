@@ -21,7 +21,8 @@
       ]
     },
     "content": {
-      "type": "blocks"
+      "type": "customField",
+      "customField": "plugin::tiptap-editor.tiptap-editor"
     }
   },
   "config": {}
