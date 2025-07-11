@@ -1,0 +1,116 @@
+{
+  "version": "0.0.0",
+  "name": "@frameless/strapi-plugin-tiptap-editor",
+  "description": "A Strapi plugin that integrates the Tiptap editor for rich text editing capabilities.",
+  "license": "EUPL-1.2",
+  "author": "Frameless.io",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:frameless/kennisbank.git",
+    "directory": "packages/strapi-plugin-tiptap-editor"
+  },
+  "keywords": [
+    "strapi-plugin",
+    "tiptap",
+    "editor",
+    "wysiwyg",
+    "rich-text-editor",
+    "strapi"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:front": "run -T tsc -p admin/tsconfig.json",
+    "test:ts:back": "run -T tsc -p server/tsconfig.json",
+    "lint": "eslint . --max-warnings 0",
+    "lint-build": "tsc --noEmit -p admin/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
+    "lint-fix": "eslint . --max-warnings 0 --fix",
+    "clean": "rimraf .next .strapi dist"
+  },
+  "dependencies": {
+    "@floating-ui/react": "0.27.13",
+    "@radix-ui/react-tooltip": "1.2.7",
+    "@strapi/design-system": "2.0.0-rc.27",
+    "@strapi/icons": "2.0.0-rc.27",
+    "@tiptap/core": "2.25.0",
+    "@tiptap/extension-bullet-list": "2.24.2",
+    "@tiptap/extension-details": "2.24.2",
+    "@tiptap/extension-details-content": "2.24.2",
+    "@tiptap/extension-details-summary": "2.24.2",
+    "@tiptap/extension-document": "2.25.0",
+    "@tiptap/extension-heading": "2.25.0",
+    "@tiptap/extension-horizontal-rule": "2.25.0",
+    "@tiptap/extension-list-item": "2.24.2",
+    "@tiptap/extension-paragraph": "2.25.0",
+    "@tiptap/extension-placeholder": "2.25.0",
+    "@tiptap/extension-table": "2.25.0",
+    "@tiptap/extension-table-cell": "2.25.0",
+    "@tiptap/extension-table-header": "2.25.0",
+    "@tiptap/extension-table-row": "2.25.0",
+    "@tiptap/react": "2.24.0",
+    "@tiptap/starter-kit": "2.24.0",
+    "@utrecht/component-library-css": "7.3.0",
+    "@utrecht/design-tokens": "3.3.0",
+    "prosemirror-utils": "1.2.2",
+    "react-icons": "5.5.0",
+    "react-intl": "7.1.11"
+  },
+  "devDependencies": {
+    "@frameless/eslint-config": "workspace:*",
+    "@frameless/typescript-config": "workspace:*",
+    "@strapi/sdk-plugin": "5.3.2",
+    "@strapi/strapi": "5.17.0",
+    "@strapi/typescript-utils": "5.17.0",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "@types/styled-components": "5.1.34",
+    "prettier": "3.6.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.1",
+    "rimraf": "6.0.1",
+    "styled-components": "6.1.19",
+    "typescript": "5.8.3"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.17.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "styled-components": "^6.1.19"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "tiptap-editor",
+    "displayName": "tiptap-editor",
+    "description": "A Strapi plugin that integrates the Tiptap editor for rich text editing capabilities."
+  }
+}

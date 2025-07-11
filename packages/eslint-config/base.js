@@ -64,6 +64,7 @@ export const config = [
       ...jsRules,
       'import/no-unresolved': 'off',
       'import/named': 'off',
+      'import/no-named-as-default': 0,
       'import/order': [
         'warn',
         {
