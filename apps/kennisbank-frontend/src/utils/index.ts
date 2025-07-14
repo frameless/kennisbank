@@ -6,4 +6,4 @@ export { getStrapiURL } from './getStrapiURL';
 export { getURL } from './getURL';
 export { setEnv } from './setEnv';
 export { showErrorBasedOnENV } from './showErrorBasedOnENV';
-export { strapiURL } from './strapiURL';
+export {categories, mappedCategory} from './mapped-category'
