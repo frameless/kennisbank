@@ -23,3 +23,12 @@ export const GET_KENNISARTIKEL_BY_SLUG = gql(`
     }
   }
 `);
+export const GET_ALL_KENNISARTIKELEN = gql(`
+  query getAllProducts {
+  products(pagination: { start: 0, limit: -1 }) {
+    title
+    description
+    slug
+  }
+}
+  `);
