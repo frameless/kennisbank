@@ -30,7 +30,6 @@ const Home = async () => {
     url: strapiURL,
     query: GET_HOME_PAGE,
     headers: {
-      // eslint-disable-next-line turbo/no-undeclared-env-vars
       Authorization: `Bearer ${process.env.KENNISBANK_API_TOKEN}`,
     },
   });

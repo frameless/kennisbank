@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.json",
+  "globalEnv": ["KENNISBANK_API_URL", "KENNISBANK_API_TOKEN", "NODE_ENV", "DEBUG"],
   "ui": "tui",
   "tasks": {
     "build": {
