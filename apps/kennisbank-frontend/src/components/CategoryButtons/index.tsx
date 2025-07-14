@@ -34,12 +34,20 @@ export const CategoryButtons = ({ sections }: { sections: SectionsTypes[] }) => 
         }}
         aria-label="Category Filters"
       >
-        <button onClick={() => setSectionData(sections)}>All</button>
-        {filteredSections.map((section) => (
-          <button key={section.category} onClick={() => onCategoryButtonClickedHandler(section.category)}>
-            {mappedCategory[section.category]}
-          </button>
-        ))}
+        <ul style={{ display: 'flex', gap: '10px', listStyle: 'none', padding: 0, margin: 0 }} role="list">
+          <li>
+            <button type="button" onClick={() => setSectionData(sections)}>
+              All
+            </button>
+          </li>
+          {filteredSections.map((section, index: number) => (
+            <li key={index}>
+              <button type="button" onClick={() => onCategoryButtonClickedHandler(section.category)}>
+                {mappedCategory[section.category]}
+              </button>
+            </li>
+          ))}
+        </ul>
       </nav>
       <Sections components={sectionData} />
     </div>

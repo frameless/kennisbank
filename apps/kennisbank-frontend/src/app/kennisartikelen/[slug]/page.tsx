@@ -36,8 +36,10 @@ const KennisartikelPage = async ({ params }: KennisartikelPageProps) => {
         paddingBlock: '2rem',
       }}
     >
-      <h1>{product?.title}</h1>
-      <CategoryButtons sections={product?.sections ?? []} />
+      <main>
+        <h1>{product?.title}</h1>
+        <CategoryButtons sections={product?.sections ?? []} />
+      </main>
     </div>
   );
 };
