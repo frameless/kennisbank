@@ -1,4 +1,3 @@
-/* eslint-disable turbo/no-undeclared-env-vars */
 export const showErrorBasedOnENV = (message: string) => {
   if (
     process.env['NODE_ENV'] === 'development' ||
