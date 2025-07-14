@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fi';
 
 import { GET_HOME_PAGE } from '@/queries/graphql';
-import { fetchData, strapiURL } from '@/utils';
+import { fetchData, getStrapiURL } from '@/utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,7 +27,7 @@ interface HomePageData {
 
 const Home = async () => {
   const { data } = await fetchData<HomePageData>({
-    url: strapiURL,
+    url: getStrapiURL(),
     query: GET_HOME_PAGE,
     headers: {
       Authorization: `Bearer ${process.env.KENNISBANK_API_TOKEN}`,
