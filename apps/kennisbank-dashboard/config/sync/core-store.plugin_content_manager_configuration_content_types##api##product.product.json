@@ -47,6 +47,20 @@
           "sortable": true
         }
       },
+      "description": {
+        "edit": {
+          "label": "Beschrijving",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "sections": {
         "edit": {
           "label": "Inhoudssecties",
@@ -138,6 +152,12 @@
           {
             "name": "slug",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
           }
         ],
         [

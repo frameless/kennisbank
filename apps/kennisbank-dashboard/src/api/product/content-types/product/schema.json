@@ -21,6 +21,9 @@
       "targetField": "title",
       "required": true
     },
+    "description": {
+      "type": "text"
+    },
     "sections": {
       "type": "dynamiczone",
       "components": [
