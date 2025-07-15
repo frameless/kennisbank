@@ -8,7 +8,11 @@ export const Sections = ({ components }: SectionsProps) => {
   return components.map((item, index: number) => {
     switch (item.component) {
       case 'ComponentSharedContentBlock':
-        return <div key={index} dangerouslySetInnerHTML={{ __html: item.content ?? '' }} />;
+        return (
+          <section key={index}>
+            <div dangerouslySetInnerHTML={{ __html: item.content ?? '' }} />
+          </section>
+        );
       default:
         return null;
     }
