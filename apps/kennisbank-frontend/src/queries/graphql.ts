@@ -23,6 +23,7 @@ export const GET_KENNISARTIKEL_BY_SLUG = gql(`
     }
   }
 `);
+
 export const GET_ALL_KENNISARTIKELEN = gql(`
   query getAllProducts {
   products(pagination: { start: 0, limit: -1 }) {
@@ -30,5 +31,11 @@ export const GET_ALL_KENNISARTIKELEN = gql(`
     description
     slug
   }
-}
-  `);
+}`);
+export const SEARCH_KENNISARTIKEL_BY_TITLE = gql(`
+  query SearchKennisartikelByTitle($query: String!) {
+  products(filters: { title: { contains: $query } }) {
+    title
+    slug
+  }
+}`);
