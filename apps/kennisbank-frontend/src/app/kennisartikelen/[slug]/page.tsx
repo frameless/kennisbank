@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { GET_KENNISARTIKEL_BY_SLUG } from '@/queries/graphql';
 import { KennisartikelQueryTypes } from '@/types';
 import { fetchData, getStrapiURL } from '@/utils';
-import { CategoryButtons } from '@/components';
+import { Article, CategoryButtons, Heading } from '@/components';
 
 interface KennisartikelPageProps {
   params: Promise<{ slug: string }>;
@@ -29,18 +29,12 @@ const KennisartikelPage = async ({ params }: KennisartikelPageProps) => {
 
   const product = data.products[0];
   return (
-    <div
-      style={{
-        inlineSize: '800px',
-        marginInline: 'auto',
-        paddingBlock: '2rem',
-      }}
-    >
-      <main>
-        <h1>{product?.title}</h1>
+    <main>
+      <Article>
+        <Heading level={1}>{product?.title}</Heading>
         <CategoryButtons sections={product?.sections ?? []} />
-      </main>
-    </div>
+      </Article>
+    </main>
   );
 };
 export default KennisartikelPage;

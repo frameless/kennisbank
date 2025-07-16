@@ -3,53 +3,64 @@
 import { useState } from 'react';
 
 import { Sections } from '../Sections';
+import { Button } from '../index';
 
 import { Category, SectionsTypes } from '@/types';
 import { categories, mappedCategory } from '@/utils';
 
-export const CategoryButtons = ({ sections }: { sections: SectionsTypes[] }) => {
-  const filteredSections = sections.filter((section) => categories.includes(section.category));
-  const [sectionData, setSectionData] = useState<SectionsTypes[]>(sections);
+import './styles.css';
 
-  const onCategoryButtonClickedHandler = (category: Category) => {
-    const filteredSections = sections.filter((section) => section.category === category);
-    setSectionData(filteredSections);
+export const CategoryButtons = ({ sections }: { sections: SectionsTypes[] }) => {
+  const [activeCategory, setActiveCategory] = useState<Category | 'all'>('all');
+
+  const handleCategoryClick = (category: Category | 'all') => {
+    setActiveCategory(category);
   };
 
+  const uniqueFilteredCategories = Array.from(
+    new Set(
+      sections
+        .map((section) => section.category)
+        .filter((category): category is Category => categories.includes(category)),
+    ),
+  );
+
+  const displayedSections =
+    activeCategory === 'all' ? sections : sections.filter((section) => section.category === activeCategory);
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '10px',
-        marginBlock: '1rem',
-        alignItems: 'center',
-      }}
-    >
-      <nav
-        style={{
-          display: 'flex',
-          gap: '10px',
-          marginBlock: '1rem',
-        }}
-        aria-label="Category Filters"
-      >
-        <ul style={{ display: 'flex', gap: '10px', listStyle: 'none', padding: 0, margin: 0 }} role="list">
+    <div className="frameless-category-buttons">
+      <nav className="frameless-category-buttons__nav" aria-label="Category Filters">
+        <ul role="list" className="frameless-category-buttons__list">
           <li>
-            <button type="button" onClick={() => setSectionData(sections)}>
+            <Button
+              appearance={activeCategory === 'all' ? 'secondary-action-button' : 'primary-action-button'}
+              type="button"
+              aria-pressed={activeCategory === 'all'}
+              onClick={() => handleCategoryClick('all')}
+            >
               All
-            </button>
+            </Button>
           </li>
-          {filteredSections.map((section, index: number) => (
-            <li key={index}>
-              <button type="button" onClick={() => onCategoryButtonClickedHandler(section.category)}>
-                {mappedCategory[section.category]}
-              </button>
+
+          {uniqueFilteredCategories.map((category) => (
+            <li key={category}>
+              <Button
+                appearance={activeCategory === category ? 'secondary-action-button' : 'primary-action-button'}
+                type="button"
+                aria-pressed={activeCategory === category}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {mappedCategory[category]}
+              </Button>
             </li>
           ))}
         </ul>
       </nav>
-      <Sections components={sectionData} />
+
+      <div className="utrecht-rich-text">
+        <Sections components={displayedSections} />
+      </div>
     </div>
   );
 };
