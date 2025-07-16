@@ -33,6 +33,34 @@
           "sortable": true
         }
       },
+      "subtitle": {
+        "edit": {
+          "label": "Subtitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sections": {
+        "edit": {
+          "label": "sections",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sections",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -106,10 +134,25 @@
           {
             "name": "title",
             "size": 6
+          },
+          {
+            "name": "subtitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "sections",
+            "size": 12
           }
         ]
       ],
-      "list": ["id", "title", "createdAt", "updatedAt"]
+      "list": [
+        "id",
+        "title",
+        "createdAt",
+        "updatedAt"
+      ]
     },
     "uid": "api::home-page.home-page"
   },

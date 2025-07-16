@@ -1,0 +1,105 @@
+{
+  "key": "plugin_content_manager_configuration_components::shared.call-to-action",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "textContent",
+      "defaultSortBy": "documentId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "textContent": {
+        "edit": {
+          "label": "Inhoud",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "textContent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "appearance": {
+        "edit": {
+          "label": "Verschijning",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "appearance",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "href": {
+        "edit": {
+          "label": "href",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "href",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "documentId": {
+        "edit": {},
+        "list": {
+          "label": "documentId",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "textContent",
+            "size": 6
+          },
+          {
+            "name": "href",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "appearance",
+            "size": 6
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "textContent",
+        "appearance",
+        "href"
+      ]
+    },
+    "uid": "shared.call-to-action",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

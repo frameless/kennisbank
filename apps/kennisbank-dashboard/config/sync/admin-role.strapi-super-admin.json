@@ -6,13 +6,15 @@
   "locale": null,
   "permissions": [
     {
-      "documentId": "wtzjay7053py8tpvpv9uh88e",
+      "documentId": "m5p5o2ozxb1qqlq8zy1r8luo",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "subtitle",
+          "sections"
         ]
       },
       "conditions": [],
@@ -37,33 +39,37 @@
       "locale": null
     },
     {
-      "documentId": "c7glqlvj2h7kkaummxl3gg46",
+      "documentId": "pgg3zgfw0rx63ous3dghokdf",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "subtitle",
+          "sections"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "jotr66cyxh16hq3p2udl883r",
+      "documentId": "pi2nrgagrp5yhxws1bm9du3r",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "subtitle",
+          "sections"
         ]
       },
       "conditions": [],
       "locale": null
     },
     {
-      "documentId": "yo4numuzt6homlo49x05dtu7",
+      "documentId": "yx1x3urddjo6nhh2iwxxuaiy",
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
       "subject": "api::product.product",
@@ -71,6 +77,7 @@
         "fields": [
           "title",
           "slug",
+          "description",
           "sections"
         ]
       },
@@ -96,7 +103,7 @@
       "locale": null
     },
     {
-      "documentId": "cpf9i3iq7rn789jwjh6w6xzo",
+      "documentId": "xmfw4lqdod7dy5g1t8c0eukf",
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::product.product",
@@ -104,6 +111,7 @@
         "fields": [
           "title",
           "slug",
+          "description",
           "sections"
         ]
       },
@@ -111,7 +119,7 @@
       "locale": null
     },
     {
-      "documentId": "cy3axp05tspeo7mf23z3nbka",
+      "documentId": "bmbs5f07mjtjjy8ravikp7hy",
       "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::product.product",
@@ -119,6 +127,7 @@
         "fields": [
           "title",
           "slug",
+          "description",
           "sections"
         ]
       },

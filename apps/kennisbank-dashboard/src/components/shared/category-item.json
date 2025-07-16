@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_category_items",
+  "info": {
+    "displayName": "Category Item"
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "enumeration",
+      "enum": [
+        "introduction",
+        "application",
+        "proof",
+        "conditions",
+        "objection",
+        "costs",
+        "term",
+        "what to do if no response",
+        "details",
+        "contact"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "icons": {
+      "type": "enumeration",
+      "enum": [
+        "introduction",
+        "application",
+        "proof",
+        "conditions",
+        "objection",
+        "costs",
+        "term",
+        "what to do if no response",
+        "details",
+        "contact"
+      ]
+    }
+  },
+  "config": {}
+}

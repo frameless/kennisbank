@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_call_to_actions",
+  "info": {
+    "displayName": "Call to action",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "textContent": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "appearance": {
+      "type": "enumeration",
+      "default": "primary",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    }
+  },
+  "config": {}
+}

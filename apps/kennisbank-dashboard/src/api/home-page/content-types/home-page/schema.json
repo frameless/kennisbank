@@ -13,6 +13,13 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": ["shared.category", "shared.call-to-action"]
     }
   }
 }
