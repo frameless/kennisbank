@@ -1,0 +1,34 @@
+.frameless-search-container {
+  position: relative;
+  padding: 1rem;
+}
+
+.frameless-search-dropdown {
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  left: 14px;
+  box-shadow: 0 4px 6px #0000001a;
+  inline-size: 450px;
+}
+
+.frameless-search-item {
+  padding-inline: 0.75rem;
+  padding-block: 0.75rem;
+  text-decoration: none;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+.frameless-search-item:last-child {
+  border-bottom: none;
+}
+
+.frameless-search-item:hover {
+  background-color: #f9fafb;
+}
+

@@ -4,6 +4,25 @@ export const GET_HOME_PAGE = gql(`
 query getHomePage {
   homePage {
     title
+    subtitle
+    sections {
+      ... on ComponentSharedCategory {
+        component: __typename
+        item {
+          id
+          categories
+          description
+          icons
+        }
+      }
+      ... on ComponentSharedCallToAction {
+        component: __typename
+        id
+        appearance
+        textContent
+        href
+      }
+    }
   }
 }
 `);

@@ -4,8 +4,10 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { onSearchBarChangeHandle, onSearchBarSubmit } from '../../actions';
+import { Button, Textbox } from '../index';
 
-import { styles } from './style';
+// import { styles } from './style';
+import './styles.css';
 
 // type SetSearchResults = {
 //   value: string;
@@ -46,29 +48,23 @@ export function SearchBar() {
   };
 
   return (
-    <div style={styles.container}>
-      <form style={styles.form} action={formAction}>
-        <input
-          style={styles.input}
-          onChange={(event) => handleInputChange(event.target.value)}
-          type="text"
-          name="query"
-        />
-        <button style={styles.button} type="submit">
+    <div className="frameless-search-container">
+      <form action={formAction}>
+        <Textbox onChange={(event) => handleInputChange(event.target.value)} type="text" name="query" />
+        <Button appearance="primary-action-button" type="submit">
           Zoek
-        </button>
+        </Button>
       </form>
 
-      <div style={styles.resultsContainer}>
-        {searchResults &&
-          searchResults.map((kennisartikelen, index) => (
-            <div key={index} style={styles.resultItem}>
-              <a href={`/kennisartikelen/${kennisartikelen.slug}`} style={styles.resultLink}>
-                <h3 style={styles.resultTitle}>{kennisartikelen.title}</h3>
-              </a>
-            </div>
+      {searchResults.length > 0 && (
+        <div className="frameless-search-dropdown">
+          {searchResults.map((item, index) => (
+            <a key={index} href={`/kennisartikelen/${item.slug}`} className="frameless-search-item">
+              <div className="frameless-search-title">{item.title}</div>
+            </a>
           ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

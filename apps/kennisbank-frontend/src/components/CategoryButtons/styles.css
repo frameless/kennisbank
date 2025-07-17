@@ -1,0 +1,20 @@
+.frameless-category-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+  align-items: center;
+}
+
+.frameless-category-buttons__nav {
+  margin-block: 1rem;
+}
+.frameless-category-buttons__list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  flex-wrap: wrap;
+}

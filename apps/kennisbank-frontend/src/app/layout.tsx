@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import '@utrecht/component-library-css';
+import '@utrecht/design-tokens/dist/index.css';
 
 import './globals.css';
 import { SearchBar } from '@/components';
@@ -24,13 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header>
-          <SearchBar />
-        </header>
-
-        {children}
+    <html lang="nl" className="utrecht-theme utrecht-document">
+      <header>
+        <SearchBar />
+      </header>
+      <body className={`${geistSans.variable} ${geistMono.variable} `}>
+        <div className="utrecht-page-layout">
+          <div className="utrecht-page-body">
+            <div className="utrecht-page-body__content">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
