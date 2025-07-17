@@ -169,7 +169,7 @@ export const EditorBox = styled(Box)<{ theme: Theme }>`
     td,
     th {
       --utrecht-table-header-cell-font-weight: var(--utrecht-table-header-font-weight);
-      border: 1px solid ${({ theme }) => theme.colors.neutral100};
+      border: 1px solid ${({ theme }) => theme.colors.neutral1000};
       min-inline-size: 3em;
     }
 
