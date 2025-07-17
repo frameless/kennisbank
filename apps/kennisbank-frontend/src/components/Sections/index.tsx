@@ -9,6 +9,8 @@ import { mappedIcons } from '../Icon';
 import { HomePageSection, SectionsTypes } from '@/types';
 import { mappedCategory } from '@/utils';
 
+import './styles.css';
+
 export interface SectionsProps {
   components: SectionsTypes[] | HomePageSection[];
 }
@@ -36,7 +38,7 @@ export const Sections = ({ components }: SectionsProps) => {
         return (
           component?.href &&
           component?.textContent && (
-            <ButtonGroup key={index}>
+            <ButtonGroup className="frameless-call-to-action-group" key={index}>
               <Link
                 className="utrecht-button-link utrecht-button-link--html-a utrecht-button-link--primary-action"
                 href={component.href}
@@ -46,6 +48,7 @@ export const Sections = ({ components }: SectionsProps) => {
             </ButtonGroup>
           )
         );
+
       default:
         return null;
     }

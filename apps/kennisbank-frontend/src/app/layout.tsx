@@ -4,7 +4,7 @@ import '@utrecht/component-library-css';
 import '@utrecht/design-tokens/dist/index.css';
 
 import './globals.css';
-import { SearchBar } from '@/components';
+import { Page, PageHeader, SearchBar } from '@/components';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -27,9 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className="utrecht-theme utrecht-document">
-      <header>
-        <SearchBar />
-      </header>
+      <Page>
+        <PageHeader>
+          <SearchBar />
+        </PageHeader>
+      </Page>
       <body className={`${geistSans.variable} ${geistMono.variable} `}>
         <div className="utrecht-page-layout">
           <div className="utrecht-page-body">
