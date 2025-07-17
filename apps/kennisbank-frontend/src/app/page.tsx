@@ -1,7 +1,7 @@
 import { GET_HOME_PAGE } from '@/queries/graphql';
 import { fetchData, getStrapiURL } from '@/utils';
 import { HomePageRootType } from '@/types';
-import { Heading, Paragraph, Sections } from '@/components';
+import { Heading, Page, Paragraph, Sections } from '@/components';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,9 +16,11 @@ const Home = async () => {
 
   return (
     <main>
-      <Heading level={1}>{data?.homePage?.title}</Heading>
-      <Paragraph>{data.homePage.subtitle}</Paragraph>
-      <Sections components={data.homePage.sections} />
+      <Page>
+        <Heading level={1}>{data?.homePage?.title}</Heading>
+        <Paragraph>{data.homePage.subtitle}</Paragraph>
+        <Sections components={data.homePage.sections} />
+      </Page>
     </main>
   );
 };
