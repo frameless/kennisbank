@@ -219,6 +219,7 @@ export const TableControls = ({ editor }: { editor: any }) => {
               animation: 'slideIn 0.2s ease',
               minWidth: currentView === 'main' ? '280px' : '250px',
               maxWidth: '320px',
+              zIndex: 9999,
             }}
             background="neutral0"
             shadow="popupShadow"
