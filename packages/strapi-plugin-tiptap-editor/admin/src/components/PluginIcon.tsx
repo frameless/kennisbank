@@ -1,5 +1,5 @@
-import { PuzzlePiece } from '@strapi/icons';
+import { MdEditNote } from 'react-icons/md';
 
-const PluginIcon = () => <PuzzlePiece />;
+const PluginIcon = () => <MdEditNote />;
 
 export { PluginIcon };
