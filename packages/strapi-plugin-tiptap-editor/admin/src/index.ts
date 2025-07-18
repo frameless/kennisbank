@@ -36,11 +36,11 @@ export default {
       icon: PluginIcon,
       intlLabel: {
         id: 'tiptap-editor.label',
-        defaultMessage: 'Color',
+        defaultMessage: 'TipTap',
       },
       intlDescription: {
         id: 'tiptap-editor.description',
-        defaultMessage: 'Select any color',
+        defaultMessage: 'Rich text editor',
       },
       components: {
         Input: async () =>
