@@ -6,6 +6,11 @@
   "locale": null,
   "permissions": [
     {
+      "documentId": "p9rz38z3l9a41wvonsx2kpvt",
+      "action": "api::not-found-page.not-found-page.find",
+      "locale": null
+    },
+    {
       "documentId": "yld85oqb2i6n802hrsyennvy",
       "action": "api::product.product.find",
       "locale": null
