@@ -56,7 +56,7 @@ export interface HomePage {
 export type HomePageSection = ComponentSharedCategory | ComponentSharedCallToAction;
 
 export interface ComponentSharedCategory {
-  component: "ComponentSharedCategory";
+  component: 'ComponentSharedCategory';
   item: HomePageCategoryItem[];
 }
 
@@ -68,10 +68,14 @@ export interface HomePageCategoryItem {
 }
 
 export interface ComponentSharedCallToAction {
-  component: "ComponentSharedCallToAction";
+  component: 'ComponentSharedCallToAction';
   id: string;
   appearance: string;
   textContent: string;
   href: string;
 }
 
+export interface PageNotFoundResultType {
+  notFoundPage: any;
+  data: PageNotFoundResultType;
+}
