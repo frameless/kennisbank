@@ -11,11 +11,7 @@
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
-        "fields": [
-          "title",
-          "subtitle",
-          "sections"
-        ]
+        "fields": ["title", "subtitle", "sections"]
       },
       "conditions": [],
       "locale": null
@@ -44,11 +40,7 @@
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
-        "fields": [
-          "title",
-          "subtitle",
-          "sections"
-        ]
+        "fields": ["title", "subtitle", "sections"]
       },
       "conditions": [],
       "locale": null
@@ -59,11 +51,7 @@
       "actionParameters": {},
       "subject": "api::home-page.home-page",
       "properties": {
-        "fields": [
-          "title",
-          "subtitle",
-          "sections"
-        ]
+        "fields": ["title", "subtitle", "sections"]
       },
       "conditions": [],
       "locale": null
@@ -74,10 +62,7 @@
       "actionParameters": {},
       "subject": "api::not-found-page.not-found-page",
       "properties": {
-        "fields": [
-          "titel",
-          "body"
-        ]
+        "fields": ["titel", "body"]
       },
       "conditions": [],
       "locale": null
@@ -106,10 +91,7 @@
       "actionParameters": {},
       "subject": "api::not-found-page.not-found-page",
       "properties": {
-        "fields": [
-          "titel",
-          "body"
-        ]
+        "fields": ["titel", "body"]
       },
       "conditions": [],
       "locale": null
@@ -120,10 +102,7 @@
       "actionParameters": {},
       "subject": "api::not-found-page.not-found-page",
       "properties": {
-        "fields": [
-          "titel",
-          "body"
-        ]
+        "fields": ["titel", "body"]
       },
       "conditions": [],
       "locale": null
@@ -134,12 +113,7 @@
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
-        "fields": [
-          "title",
-          "slug",
-          "description",
-          "sections"
-        ]
+        "fields": ["title", "slug", "description", "sections"]
       },
       "conditions": [],
       "locale": null
@@ -168,12 +142,7 @@
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
-        "fields": [
-          "title",
-          "slug",
-          "description",
-          "sections"
-        ]
+        "fields": ["title", "slug", "description", "sections"]
       },
       "conditions": [],
       "locale": null
@@ -184,12 +153,7 @@
       "actionParameters": {},
       "subject": "api::product.product",
       "properties": {
-        "fields": [
-          "title",
-          "slug",
-          "description",
-          "sections"
-        ]
+        "fields": ["title", "slug", "description", "sections"]
       },
       "conditions": [],
       "locale": null

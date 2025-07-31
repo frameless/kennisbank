@@ -129,12 +129,7 @@
           }
         ]
       ],
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "titel"
-      ]
+      "list": ["id", "createdAt", "updatedAt", "titel"]
     },
     "uid": "api::not-found-page.not-found-page"
   },
