@@ -1,9 +1,10 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+import { MdArrowBack } from 'react-icons/md';
 
 import { GET_ALL_KENNISARTIKELEN } from '@/queries/graphql';
 import { fetchData, getStrapiURL } from '@/utils';
 import { ProductsData } from '@/types';
-import { Heading, Page, Paragraph } from '@/components';
+import { Heading, Page, Paragraph, Link } from '@/components';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,6 +23,10 @@ const KennisartikelenPage = async () => {
     <main>
       <Page>
         <Heading level={1}>Alle Kennisartikelen</Heading>
+        <Link href={'/.'}>
+          <MdArrowBack />
+          Terug
+        </Link>
         <section className="article-list">
           {artikelen.map((artikel, index) => (
             <article key={index} className="article-card">
