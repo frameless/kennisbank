@@ -26,7 +26,6 @@ query getHomePage {
   }
 }
 `);
-
 export const GET_KENNISARTIKEL_BY_SLUG = gql(`
   query getKennisartikelBySlug($slug: String!) {
     products(filters: { slug: { eq: $slug } }) {
@@ -42,7 +41,6 @@ export const GET_KENNISARTIKEL_BY_SLUG = gql(`
     }
   }
 `);
-
 export const GET_ALL_KENNISARTIKELEN = gql(`
   query getAllProducts {
   products(pagination: { start: 0, limit: -1 }) {
@@ -58,3 +56,11 @@ export const SEARCH_KENNISARTIKEL_BY_TITLE = gql(`
     slug
   }
 }`);
+export const GET_NOT_FOUND_PAGE = gql(`
+query NotFoundPage {
+  notFoundPage {
+    titel
+    body
+  }
+}
+`);
