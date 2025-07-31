@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
+import { MdArrowBack } from 'react-icons/md';
 
 import { GET_KENNISARTIKEL_BY_SLUG } from '@/queries/graphql';
 import { KennisartikelQueryTypes } from '@/types';
 import { fetchData, getStrapiURL } from '@/utils';
-import { Article, CategoryButtons, Heading, Page } from '@/components';
+import { Article, CategoryButtons, Heading, Link, Page } from '@/components';
 
 interface KennisartikelPageProps {
   params: Promise<{ slug: string }>;
@@ -33,6 +34,10 @@ const KennisartikelPage = async ({ params }: KennisartikelPageProps) => {
       <Page>
         <Article>
           <Heading level={1}>{product?.title}</Heading>
+          <Link href={'/kennisartikelen'}>
+            <MdArrowBack />
+            Terug
+          </Link>
           <CategoryButtons sections={product?.sections ?? []} />
         </Article>
       </Page>
