@@ -19,7 +19,9 @@ const NotFoundPage = async () => {
   if (!content) {
     return (
       <main>
-        <Heading level={1}>Pagina niet gevonden</Heading>
+        <Page>
+          <Heading level={1}>Pagina niet gevonden</Heading>
+        </Page>
       </main>
     );
   }
