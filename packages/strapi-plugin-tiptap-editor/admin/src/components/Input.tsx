@@ -18,6 +18,7 @@ import Table from '@tiptap/extension-table';
 import TableCell from '@tiptap/extension-table-cell';
 import TableHeader from '@tiptap/extension-table-header';
 import TableRow from '@tiptap/extension-table-row';
+import Link from '@tiptap/extension-link';
 
 import { TableCaption } from '../extensions/TableCaption';
 import { TableFigure } from '../extensions/TableFigure';
@@ -82,6 +83,12 @@ export const TiptapEditorInput = forwardRef<HTMLDivElement, TiptapEditorInputPro
         TableCell,
         TableCaption,
         TableFigure,
+        Link.configure({
+          openOnClick: false,
+          autolink: true,
+          defaultProtocol: 'https',
+          protocols: ['http', 'https'],
+        }),
       ],
       content: value,
       editable: !disabled,
