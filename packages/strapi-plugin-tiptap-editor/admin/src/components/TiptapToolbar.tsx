@@ -11,8 +11,12 @@ import {
   MdReadMore,
   MdClose,
   MdRemove,
+  MdLink,
+  MdLinkOff,
 } from 'react-icons/md';
+import type { IconType } from 'react-icons';
 
+import { handleLinkCommand } from '../commands/link';
 import { Theme } from '../types';
 
 import { TableControls } from './TableControls';
@@ -30,7 +34,16 @@ const ToolbarWrapper = styled.div<{ theme: Theme }>`
 type ToolbarButtonProps = {
   active: boolean;
   theme: Theme;
+  disabled?: boolean;
 };
+
+interface ToolBarButtonsType {
+  label: string;
+  icon: IconType;
+  command: (editor: Editor) => void;
+  isActive: (editor: Editor) => boolean;
+  isEnabled?: (editor: Editor) => boolean;
+}
 
 const ToolbarButton = styled(Button)<ToolbarButtonProps>`
   color: ${({ active, theme }) => (active ? theme.colors.primary600 : theme.colors.neutral1000)};
@@ -46,48 +59,42 @@ type TiptapToolbarProps = {
   editor: Editor | null;
 };
 
-const BUTTONS = [
+const BUTTONS: ToolBarButtonsType[] = [
   {
     label: 'Bold',
     icon: MdFormatBold,
     command: (editor: Editor) => editor.chain().focus().toggleBold().run(),
     isActive: (editor: Editor) => editor.isActive('bold'),
-    isEnabled: (editor: Editor) => editor.can().toggleBold(),
   },
   {
     label: 'Italic',
     icon: MdFormatItalic,
     command: (editor: Editor) => editor.chain().focus().toggleItalic().run(),
     isActive: (editor: Editor) => editor.isActive('italic'),
-    isEnabled: (editor: Editor) => editor.can().toggleItalic(),
   },
   {
     label: 'Strikethrough',
     icon: MdStrikethroughS,
     command: (editor: Editor) => editor.chain().focus().toggleStrike().run(),
     isActive: (editor: Editor) => editor.isActive('strike'),
-    isEnabled: (editor: Editor) => editor.can().toggleStrike(),
   },
   {
     label: 'Bullet List',
     icon: MdFormatListBulleted,
     command: (editor: Editor) => editor.chain().focus().toggleBulletList().run(),
     isActive: (editor: Editor) => editor.isActive('bulletList'),
-    isEnabled: (editor: Editor) => editor.can().toggleBulletList(),
   },
   {
     label: 'Ordered List',
     icon: MdFormatListNumbered,
     command: (editor: Editor) => editor.chain().focus().toggleOrderedList().run(),
     isActive: (editor: Editor) => editor.isActive('orderedList'),
-    isEnabled: (editor: Editor) => editor.can().toggleOrderedList(),
   },
   {
     label: 'Horizontal Rule',
     icon: MdRemove,
     command: (editor: Editor) => editor.chain().focus().setHorizontalRule().run(),
     isActive: (editor: Editor) => editor.isActive('horizontalRule'),
-    isEnabled: (editor: Editor) => editor.can().setHorizontalRule(),
   },
   // --- Details Button ---
   {
@@ -95,7 +102,6 @@ const BUTTONS = [
     icon: MdReadMore,
     command: (editor: Editor) => editor.chain().focus().setDetails().run(),
     isActive: (editor: Editor) => editor.isActive('details'),
-    isEnabled: (editor: Editor) => editor.can().setDetails(),
   },
   {
     label: 'Unset Details',
@@ -103,6 +109,19 @@ const BUTTONS = [
     command: (editor: Editor) => editor.chain().focus().unsetDetails().run(),
     isActive: () => false,
     isEnabled: (editor: Editor) => editor.can().unsetDetails(),
+  },
+  {
+    label: 'Link',
+    icon: MdLink,
+    command: handleLinkCommand,
+    isActive: (editor: Editor) => editor.isActive('link'),
+  },
+  {
+    label: 'Unset Link',
+    icon: MdLinkOff,
+    command: (editor: Editor) => editor.chain().focus().unsetLink().run(),
+    isActive: (editor: Editor) => editor.isActive('link'),
+    isEnabled: (editor: Editor): boolean => !editor.isActive('link'),
   },
 ];
 
@@ -112,12 +131,13 @@ const TiptapToolbar: React.FC<TiptapToolbarProps> = ({ editor }) => {
   return (
     <ToolbarWrapper>
       <TextStyleControls editor={editor} />
-      {BUTTONS.map(({ label, icon: Icon, command, isActive }) => (
+      {BUTTONS.map(({ label, icon: Icon, command, isActive, isEnabled }) => (
         <ToolbarButton
           key={label}
           variant="tertiary"
           onClick={() => command(editor)}
           active={isActive(editor)}
+          disabled={isEnabled && isEnabled(editor)}
           aria-label={label}
           type="button"
           startIcon={<Icon />}
